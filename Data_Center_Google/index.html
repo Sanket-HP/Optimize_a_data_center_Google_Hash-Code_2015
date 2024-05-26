@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashcode Server Allocation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hashcode Server Allocation</h1>
+        <form id="inputForm">
+            <label for="rows">Rows (R):</label>
+            <input type="number" id="rows" name="rows" min="1" required>
+            
+            <label for="slots">Slots per Row (S):</label>
+            <input type="number" id="slots" name="slots" min="1" required>
+            
+            <label for="pools">Number of Pools (P):</label>
+            <input type="number" id="pools" name="pools" min="1" required>
+            
+            <label for="servers">Number of Servers (M):</label>
+            <input type="number" id="servers" name="servers" min="1" required>
+            
+            <label for="unavailableSlots">Unavailable Slots (comma separated, e.g., 0,0;1,2):</label>
+            <input type="text" id="unavailableSlots" name="unavailableSlots">
+            
+            <label for="serverData">Server Data (size,capacity per line):</label>
+            <textarea id="serverData" name="serverData" rows="5" required></textarea>
+            
+            <button type="submit">Allocate Servers</button>
+        </form>
+        <h2>Allocation Results</h2>
+        <pre id="results"></pre>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
